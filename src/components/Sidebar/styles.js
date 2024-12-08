@@ -63,7 +63,13 @@ export const Toggle = styled.button`
     $isOpened ? "translate(25%, -50%)" : "translate(32px, -50%)"};
   color: ${toggleArrayColor};
   cursor: pointer;
-  transition: transform 0.75s;
+  transition: all 0.75s;
+
+  svg {
+    transform: ${({ $isOpened }) =>
+      $isOpened ? "rotate(180deg)" : "rotate(0)"};
+    transition: transform 0.5s;
+  }
 `;
 
 export const NavWrapper = styled.nav`
@@ -195,7 +201,6 @@ export const Root = styled.aside`
     `}
 
   button {
-    &:focus,
     &:focus-visible {
       outline: 2px solid ${brandTextColor};
     }

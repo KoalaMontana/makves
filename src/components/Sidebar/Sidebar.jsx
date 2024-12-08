@@ -29,7 +29,7 @@ const bottomRoutes = [
 ];
 
 const Sidebar = () => {
-  const [isOpened, setIsOpened] = useState(true);
+  const [isOpened, setIsOpened] = useState(false);
   const containerClassnames = classnames("sidebar", { opened: isOpened });
 
   const goToRoute = (path) => {
@@ -49,7 +49,7 @@ const Sidebar = () => {
           $isOpened={isOpened}
           onClick={toggleSidebar}
           role="presentation">
-          <FontAwesomeIcon icon={isOpened ? "angle-left" : "angle-right"} />
+          <FontAwesomeIcon icon="angle-right" />
         </Toggle>
       </LogoWrapper>
       <NavWrapper aria-label="Main">
